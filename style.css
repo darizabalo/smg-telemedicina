@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: url("img/bg_smedical.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.iniciar_webrtc{
+	background: #3cb5ff;
+	border-radius: 100%;
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	border: none;
+	cursor: pointer;
+}
+.fa-video-camera{
+	color: white;
+	font-size: 3em;
+}
+#video_window{
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.fa-times-circle-o{
+	position: fixed;
+	top: 40px;
+	right: 40px;
+	cursor: pointer
+}
+.fa-times-circle-o:hover{
+	color: white;
+}
+	
+.check_previus{
+	color: #9D9D9D;
+}
+
+.no_available{
+	color: red;
+	margin-right: 20px;
+}
+.media, .web{
+	color: #14CD51; 
+	margin-right: 20px;
+}
+.previus{
+	background: white;
+	position: absolute;
+	top: 0;
+	left:0;
+	bottom: 0;
+	border-radius: 10px;
+	padding: 5px;
+	width: 40%;
+	max-width: 455px;
+
+
+}
+
+#video_espera{
+	position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   transform: translate(-50%, -50%);
+	   -webkit-transform: translate(-50%, -50%);
+}
+.previus img{
+	width: 30%;
+	margin-left: 35%;
+}
+.previus p{
+	text-align: center;
+}
+
+#campo_data{
+	margin-bottom: 10px;
+}
+.iniciar{
+	width: 100%;
+}
+.previus ul li{
+	margin: 10px 10px;
+	font-size: 1.3em;
+}
+#localView{
+	position: fixed;
+	bottom: 35%;
+	right: 30%;
+}

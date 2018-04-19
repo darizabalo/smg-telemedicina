@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+  <head>
+      <meta charset="utf-8">
+      <title>Demo WEBRTC</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  </head>
+<body>
+
+<button class="iniciar_webrtc tooltipped" data-position="left" data-delay="50" data-tooltip="Iniciar Conexion WebRTC" id="check"><i class="fa fa-video-camera fa-lg" aria-hidden="true"></i></button>
+  <div class="col s6 m6 l6">
+    <div id="video_window">
+      <video loop src="img/video2.mp4" id="video_espera" width="500" height="500" align="center"></video>
+        <div class="previus">
+            <div class="row">
+              <p>Nota: Los datos son una simulación de la data que se adjuntará a la llamada, no vienen por parte del cliente</p>
+              <img src="img/smedical.jpg" alt="">
+                <form class="col s12">
+
+                  <div class="row campo_data" id="campo_data">
+                    <div class="input-field col s6">
+                      <input placeholder="Nombre" id="first_name" type="text" class="validate data_to_attach">
+                      <label for="first_name">Nombre y Apellido</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="dni_paciente" type="text" class="validate data_to_attach">
+                      <label for="ldni_paciente">DNI</label>
+                    </div>
+                  </div>
+                  <div class="row campo_data" id="campo_data">
+                    <div class="input-field col s12">
+                      <input placeholder="Cita Nro." id="turno" type="text" class="validate data_to_attach">
+                      <label for="turno">Número de cita</label>
+                    </div>
+                  </div>
+                  <div class="row campo_data" id="campo_data">
+                    <div class="input-field col s6">
+                      <input placeholder="Nombre del médico" id="medico" type="text" class="validate data_to_attach">
+                      <label for="medico">Nombre de Médico</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input placeholder="Especialidad" id="especialidad" type="text" class="validate data_to_attach">
+                      <label for="Especialidad">Especialidad</label>
+                    </div>
+                  </div>
+                  
+                  
+                </form>
+              </div>
+            <ul>
+                <li class="check_previus"><i class="fa fa-times fa-2x no_available no_web" aria-hidden="true"></i><i class="fa fa-thumbs-up fa-2x web" aria-hidden="true"></i> Navegador Óptimo</li>
+                <li class="check_previus"><i class="fa fa-times fa-2x no_available no_media" aria-hidden="true"></i><i class="fa fa-thumbs-up fa-2x media" aria-hidden="true"></i> Disponibilidad Audio/Video</li>
+                <li><button class="btn iniciar" disabled>Iniciar llamada</button></li>
+            </ul>
+        </div>
+        <table>
+            <i class="fa fa-times-circle-o fa-3x" aria-hidden="true"></i>
+            <tr> <td> local view </td> <td> remote view </td> </tr>
+            <tr>
+                <td> <video width="160" height="120" id="localView" autoplay="autoplay" muted="muted" controls> </td>
+                <td> <video width="460" height="420" id="remoteView" autoplay="autoplay" controls> </td>
+            </tr>
+            <tr>
+              <td> <span id="localStatus"></span> </td> 
+              <td> <span id="remoteStatus"></span> </td> 
+            </tr>
+        </table>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script src="grtc.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
